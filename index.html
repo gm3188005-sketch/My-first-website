@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Future of AI in Africa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafc;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #00d4ff;
+    }
+    section {
+      min-height: 100vh;
+      padding: 80px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #203a43;
+    }
+    section p {
+      max-width: 800px;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .education { background: #e0f7fa; }
+    .healthcare { background: #f1f8e9; }
+    .agriculture { background: #fff3e0; }
+    .technology { background: #ede7f6; }
+    footer {
+      background: #203a43;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Button style */
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #00d4ff;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #009bbd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI in Africa</h1>
+    <nav>
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#healthcare">Healthcare</a></li>
+        <li><a href="#agriculture">Agriculture</a></li>
+        <li><a href="#technology">Technology</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <p>Artificial Intelligence is revolutionizing education in Africa by enabling personalized learning, bridging language barriers, and providing access to quality resources in remote areas. AI-powered platforms can tailor lessons to individual students, ensuring inclusive and equitable education for all.</p>
+    <button class="btn">Learn More</button>
+  </section>
+
+  <section id="healthcare" class="healthcare">
+    <h2>Healthcare</h2>
+    <p>AI is transforming healthcare across Africa by improving diagnostics, predicting disease outbreaks, and enhancing telemedicine. With AI-driven tools, doctors can provide faster, more accurate care, even in underserved communities.</p>
+    <button class="btn">Discover Innovations</button>
+  </section>
+
+  <section id="agriculture" class="agriculture">
+    <h2>Agriculture</h2>
+    <p>AI applications in agriculture are helping farmers increase yields, optimize irrigation, and detect crop diseases early. By leveraging AI, Africa can strengthen food security and empower smallholder farmers with smart solutions.</p>
+    <button class="btn">Explore Solutions</button>
+  </section>
+
+  <section id="technology" class="technology">
+    <h2>Technology</h2>
+    <p>The future of technology in Africa is intertwined with AI, driving innovation in fintech, smart cities, and renewable energy. AI is fostering entrepreneurship and creating opportunities for Africa to lead in the global digital economy.</p>
+    <button class="btn">See Opportunities</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 The Future of AI in Africa. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Reveal sections on scroll
+    const sections = document.querySelectorAll('section');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          section.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
